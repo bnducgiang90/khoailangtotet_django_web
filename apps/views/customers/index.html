@@ -1,0 +1,18 @@
+{% load urlparams %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer index</title>
+</head>
+<body>
+    <h1>Customer index</h1>
+    <h2>{{ form }}</h2>
+    <br/>
+    <ul>
+        <li><a href="{% url 'apps1:customer_create' %}">Create</a></li>
+        <li><a href="{% url 'apps1:customer_edit'%}{% urlparams cus_id='0002' cus_name='name 002' %}">Edit</a></li>
+    </ul>
+</body>
+</html>

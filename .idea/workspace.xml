@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5f791f4-0424-4be2-89e7-56bad221e384" name="Default Changelist" comment="" />
+    <list default="true" id="e5f791f4-0424-4be2-89e7-56bad221e384" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/controllers/customers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/templatetags/urlparams.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/views/customers/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/views/customers/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/views/customers/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/databases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/databases/postgresqldb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2-2.8.5.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2-2.8.5.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2-2.8.5.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2-2.8.5.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2-2.8.5.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2-2.8.5.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/_ipaddress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/_json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/_lru_cache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/_psycopg.cp38-win_amd64.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/_range.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/errorcodes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/extensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/extras.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/pool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/sql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/psycopg2/tz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/khoailangtotet_web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/khoailangtotet_web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/controllers/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/controllers/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/khoailangtotet_web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/khoailangtotet_web/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/khoailangtotet_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/khoailangtotet_web/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,25 +51,55 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1cRBQCpjrlPffIGO4BWO8nj0kcL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Flask/khoailangtotet_flask_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="khoailangtotet_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="khoailangtotet_web" type="Python.DjangoServer" factoryName="Django server">
       <module name="khoailangtotet_web" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,6 +123,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -68,24 +141,51 @@
       <updated>1590481507841</updated>
       <workItem from="1590481513686" duration="23000" />
       <workItem from="1590481557214" duration="8875000" />
+      <workItem from="1590564410864" duration="11127000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="423" y="24" key="CommitChangelistDialog2" timestamp="1590575955204">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="423" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1590575955204" />
     <state x="579" y="184" key="FileChooserDialogImpl" timestamp="1590563237960">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="579" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1590563237960" />
-    <state x="301" y="72" key="SettingsEditor" timestamp="1590481711352">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1590574092121">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="301" y="72" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1590481711352" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590574092121" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1590574092121">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1590574092121" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1590574092120">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1590574092120" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1590574092121">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1590574092121" />
+    <state x="301" y="72" key="SettingsEditor" timestamp="1590574070010">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="72" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1590574070010" />
     <state x="495" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1590481557390">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="495" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1590481557390" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/khoailangtotet_django_web$manage.coverage" NAME="manage Coverage Results" MODIFIED="1590564676911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
