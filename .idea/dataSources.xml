@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Django default" uuid="a9252f38-91ed-44c6-b362-8224812c0d60">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/khoailangtotet_web/settings.py</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\10.Python\git_svn\Django\khoailangtotet_django_web\db.sqlite3</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Django postgresql_khoailangdb" uuid="5077c3cd-656d-4a5b-9e2c-d77f80e15d97">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/khoailangtotet_web/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/khoailangdb</jdbc-url>
+    </data-source>
+  </component>
+</project>
