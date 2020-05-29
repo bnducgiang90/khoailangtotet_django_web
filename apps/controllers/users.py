@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from databases.postgresqldb import postgresqldb
 from django.core.paginator import Paginator
+from utils.constants import const_common
 
 class usercontroller:
 
@@ -13,7 +14,7 @@ class usercontroller:
         template_name_index = 'users/index.html'
         _db = postgresqldb()
         _datas = _db.getdatas()
-        _paginator = Paginator(_datas, 2)
+        _paginator = Paginator(_datas, const_common.PAGE_SIZE)
         _page = request.GET.get('page')
         _items = _paginator.get_page(_page)
         _context = {'items': _items}
