@@ -24,7 +24,7 @@
 <br/>
 <ul>
     <li><a href="{% url 'apps1:customer_create' %}">Create</a></li>
-    <li><a href="{% url 'apps1:customer_edit' %}{% urlparams cus_id='0002' cus_name='name 002' %}">Edit</a></li>
+{#    <li><a href="{% url 'apps1:customer_edit' %}{% urlparams cus_id='0002' cus_name='name 002' %}">Edit</a></li>#}
 </ul>
 
 <div class="container">
@@ -53,11 +53,10 @@
                 <td>{{ item.BIRTHDAY |date:'d/m/Y' }}</td>
                 <td>
                     <p data-placement="top" data-toggle="tooltip" title="Edit">
-                        <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal"
-                                data-target="#edit">
+                        <a href="{% url 'apps1:customer_edit' item.USERNAME %}" class="btn btn-info" role="button">Edit
                             <!--<span class="glyphicon glyphicon-pencil"></span>-->
                             <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </button>
+                        </a>
                     </p>
                 </td>
                 <td>

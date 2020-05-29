@@ -12,5 +12,5 @@ urlpatterns = [
     path('user/detail/<str:user_id>', users.usercontroller.detail, name='user_detail'),
     path('customer/index', customers.customerindex.as_view(), name='customer_index'),
     path('customer/create', customers.customercreate.as_view(), name='customer_create'),
-    path(r'customer/edit', customers.customeredit.as_view(), name='customer_edit')
+    path(r'customer/edit/<str:cus_id>', customers.customeredit.as_view(), name='customer_edit')
 ]

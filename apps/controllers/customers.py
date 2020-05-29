@@ -1,5 +1,6 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views import View
 from databases.postgresqldb import postgresqldb
 from django.core.paginator import Paginator
@@ -34,10 +35,12 @@ class customeredit(View):
     template_name = 'customers/edit.html'
 
     def get(self, request, *args, **kwargs):
-        cus_id = request.GET.get('cus_id', '')
-        cus_name = request.GET.get('cus_name', '')
-        context = {'context_edit': "Thông tin Sửa customer " + str(cus_id) + " name: {}".format(cus_name)}
+        print(kwargs)
+        cus_id = kwargs["cus_id"]
+        context = {'context_edit': "Thông tin Sửa customer " + str(cus_id)}
         return render(request, template_name=self.template_name, context=context)
 
     def post(self, request, *args, **kwargs):
-        pass
+        print(request.POST)
+        print(request.POST.get('EMAIL', ''))
+        return redirect(to='apps1:customer_index')

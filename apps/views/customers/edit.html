@@ -13,5 +13,20 @@
     <ul>
         <li><a href="{% url 'apps1:customer_index' %}">Back to Index</a></li>
     </ul>
+    <br/>
+    <form method="post">
+        {% csrf_token %}
+        <ul>
+            <li>
+               Username: <input type="text" name="USERNAME" />
+            </li>
+            <li>
+               Email: <input type="text" name="EMAIL" />
+            </li>
+            <li>
+                <button type="submit" >Save data</button>
+            </li>
+        </ul>
+    </form>
 </body>
 </html>
