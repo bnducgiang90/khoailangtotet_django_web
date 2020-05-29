@@ -1,13 +1,22 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
+from databases.postgresqldb import postgresqldb
+from django.core.paginator import Paginator
+from utils.constants import const_common
 
 
 class customerindex(View):
     template_name = 'customers/index.html'
 
     def get(self, request):
-        return render(request, self.template_name, {'form': 'Xin chào'})
+        _db = postgresqldb()
+        _datas = _db.getdatas()
+        _paginator = Paginator(_datas, const_common.PAGE_SIZE)
+        _page = request.GET.get('page')
+        _items = _paginator.get_page(_page)
+        _context = {'items': _items}
+        return render(request, self.template_name, context=_context)
 
 
 class customercreate(View):
