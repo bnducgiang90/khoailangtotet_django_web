@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+<!--<nav aria-label="..."> -->
+      {% if items.has_other_pages %}
+  <ul class="pagination pagination-large">
+    {% if items.has_previous %}
+      <li class="page-item">
+          <a class="page-link" href="?page={{ items.previous_page_number }}">&laquo;Previous</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+          <span class="page-link">&laquo;Previous</span>
+      </li>
+    {% endif %}
+    {% for i in items.paginator.page_range %}
+      {% if items.number == i %}
+        <li class="page-item active">
+            <span class="page-link">{{ i }} <span class="sr-only">(current)</span></span>
+        </li>
+      {% else %}
+        <li page-item>
+            <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    {% if items.has_next %}
+      <li class="page-item">
+          <a class="page-link" href="?page={{ items.next_page_number }}">&raquo;Next</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+          <span class="page-link">&raquo;Next</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+<!--</nav> -->

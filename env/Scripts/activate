@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="E:\10.Python\git_svn\Django\khoailangtotet_web\env"
+VIRTUAL_ENV="E:\10.Python\git_svn\Django\khoailangtotet_django_web\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
