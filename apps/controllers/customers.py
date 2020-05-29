@@ -37,6 +37,7 @@ class customeredit(View):
 
     def get(self, request, *args, **kwargs):
         print(kwargs)
+        print(request.META.get('HTTP_REFERER', '/'))
         cus_id = kwargs["cus_id"]
         context = {'context_edit': "Thông tin Sửa customer " + str(cus_id)}
         return render(request, template_name=self.template_name, context=context)
@@ -44,7 +45,11 @@ class customeredit(View):
     def post(self, request, *args, **kwargs):
         print(request.POST)
         print(request.POST.get('EMAIL', ''))
-        return redirect(to='apps1:customer_index')
+        print(request.META.get('HTTP_REFERER', '/'))
+        _url_index = request.POST.get('URL_INDEX', 'apps1:customer_index')
+        print(_url_index)
+        #return redirect(to=_url_index)
+        return HttpResponseRedirect(redirect_to=_url_index)
 
 
 class customerdelete(View):
@@ -53,8 +58,8 @@ class customerdelete(View):
         print(kwargs)
         cus_id = kwargs["cus_id"]
         print("username: {}".format(cus_id))
-        #context = {'context_edit': "Thông tin Sửa customer " + str(cus_id)}
-        base_url = reverse('apps1:customer_index')  # 1 /products/
-        query_string = urlencode({'page': 2})  # 2 category=42
-        url = '{}?{}'.format(base_url, query_string)  # 3 /products/?category=42
-        return redirect(to=url)
+        # base_url = reverse('apps1:customer_index')  # 1 /products/
+        # query_string = urlencode({'page': 2})  # 2 category=42
+        # url = '{}?{}'.format(base_url, query_string)  # 3 /products/?category=42
+        _url_index = request.META.get('HTTP_REFERER', '/')
+        return HttpResponseRedirect(_url_index)

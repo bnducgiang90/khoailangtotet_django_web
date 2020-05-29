@@ -26,6 +26,9 @@
             <li>
                 <button type="submit" >Save data</button>
             </li>
+            <li>
+                <input type="hidden" value="{{ request.META.HTTP_REFERER }}" name="URL_INDEX" />
+            </li>
         </ul>
     </form>
 </body>
