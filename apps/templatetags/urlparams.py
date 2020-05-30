@@ -1,6 +1,7 @@
 from django import template
 from urllib.parse import urlencode
 
+
 register = template.Library()
 
 

@@ -6,6 +6,7 @@ from django.views import View
 from databases.postgresqldb import postgresqldb
 from django.core.paginator import Paginator
 from utils.constants import const_common
+from utils.urlhelpers import urlhelper
 
 
 class customerindex(View):
@@ -41,10 +42,7 @@ class customeredit(View):
         print(request.path_info)
         print(request.build_absolute_uri())
         print(request.get_full_path())
-        _url_index = '/customer/index'
-        if request.META.get('HTTP_REFERER'):
-            _url_index = request.META.get('HTTP_REFERER')
-
+        _url_index = urlhelper.get_url_refer(request, '/customer/index')
         cus_id = kwargs["slug"]
         context = {'context_edit': "Thông tin Sửa customer " + str(cus_id), 'url_index': _url_index}
         return render(request, template_name=self.template_name, context=context)
