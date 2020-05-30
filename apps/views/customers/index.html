@@ -67,7 +67,7 @@
                             <td>{{ item.BIRTHDAY |date:'d/m/Y' }}</td>
                             <td>
                                 <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                    <a href="{% url 'apps1:customer_edit' item.USERNAME %}" class="btn btn-info btn-sm" role="button">
+                                    <a href="{% url 'apps1:customer_edit' slug=item.USERNAME %}" class="btn btn-info btn-sm" role="button">
                                         <!--<span class="glyphicon glyphicon-pencil"></span>-->
                                         <i class="fa fa-pencil fa-fw"></i>Edit
                                     </a>

@@ -1,5 +1,5 @@
 # from django.conf.urls import url
-from django.urls import path
+from django.urls import path, re_path
 from django.views.generic import TemplateView
 from apps.controllers import users, customers
 
@@ -12,6 +12,6 @@ urlpatterns = [
     path('user/detail/<str:user_id>', users.usercontroller.detail, name='user_detail'),
     path(r'customer/index', customers.customerindex.as_view(), name='customer_index'),
     path('customer/create', customers.customercreate.as_view(), name='customer_create'),
-    path(r'customer/edit/<str:cus_id>', customers.customeredit.as_view(), name='customer_edit'),
+    re_path(r'^customer/edit/(?P<slug>[a-zA-Z0-9_.-]+)/$', customers.customeredit.as_view(), name='customer_edit'),
     path(r'customer/delete/<str:cus_id>', customers.customerdelete.as_view(), name='customer_delete')
 ]
