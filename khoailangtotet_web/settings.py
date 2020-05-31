@@ -44,9 +44,34 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # login middleware
+    'login_required.middleware.LoginRequiredMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'global_login_required.GlobalLoginRequiredMiddleware',
+    # login middleware
+    # 'apps.core.middleware.LoginRequiredMiddlware',
 ]
+
+LOGIN_URL = '/auth/login'
+#
+# LOGIN_REQUIRED_IGNORE_PATHS = [
+#     r'/auth/logout/$',
+#     r'/auth/login/$',
+#     r'/auth/register/$'
+# ]
+
+LOGIN_REQUIRED_IGNORE_VIEW_NAMES = [
+    'apps1:auth_login',
+    'apps1:auth_register',
+    'apps1:auth_logout'
+]
+
+# LOGIN_EXEMPT_URLS = (
+#     r'^home/$',
+#     r'^register/$',
+#     r'^login/$',
+# )
 
 ROOT_URLCONF = 'khoailangtotet_web.urls'
 
@@ -78,24 +103,24 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
     'postgresql_khoailangdb': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'khoailangdb',
-            'USER': 'postgres',
-            'PASSWORD': 'Postgres123',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'khoailangdb',
+        'USER': 'postgres',
+        'PASSWORD': 'Postgres123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
     'postgresql_dvdrental': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'dvdrental',
-            'USER': 'postgres',
-            'PASSWORD': 'Postgres123',
-            'HOST': 'localhost',
-            'PORT': '5432',
-        },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dvdrental',
+        'USER': 'postgres',
+        'PASSWORD': 'Postgres123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
     'OPTIONS': {
-            'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
-        },
+        'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
+    },
 }
 
 # Password validation
@@ -137,4 +162,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

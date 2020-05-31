@@ -11,7 +11,7 @@ from utils.constants import const_common
 from utils.urlhelpers import urlhelper
 
 
-@method_decorator(login_required(login_url='/auth/login'), name='dispatch')
+#@method_decorator(login_required(login_url='/auth/login'), name='dispatch')
 class customerindex(View):
     template_name = 'customers/index.html'
 
@@ -26,7 +26,7 @@ class customerindex(View):
         return render(request, self.template_name, context=_context)
 
 
-@method_decorator(login_required(login_url='/auth/login'), name='dispatch')
+#@method_decorator(login_required(login_url='/auth/login'), name='dispatch')
 class customercreate(View):
     template_name = 'customers/create.html'
 
@@ -38,7 +38,7 @@ class customercreate(View):
         pass
 
 
-@method_decorator(login_required, name='dispatch')
+#@method_decorator(login_required, name='dispatch')
 class customeredit(View):
     template_name = 'customers/edit.html'
 
