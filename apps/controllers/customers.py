@@ -19,6 +19,7 @@ class customerindex(View):
         _page = request.GET.get('page')
         _items = _paginator.get_page(_page)
         _context = {'items': _items}
+        request.session['_url_index'] = request.get_full_path()
         return render(request, self.template_name, context=_context)
 
 
@@ -37,12 +38,7 @@ class customeredit(View):
     template_name = 'customers/edit.html'
 
     def get(self, request, *args, **kwargs):
-        print(kwargs)
-        print(request.META.get('HTTP_REFERER', '/'))
-        print(request.path_info)
-        print(request.build_absolute_uri())
-        print(request.get_full_path())
-        _url_index = urlhelper.get_url_refer(request, '/customer/index')
+        _url_index = urlhelper.get_url_refer(request, '/customer/index') #_url_index = request.session['_url_index']
         cus_id = kwargs["slug"]
         context = {'context_edit': "Thông tin Sửa customer " + str(cus_id), 'url_index': _url_index}
         return render(request, template_name=self.template_name, context=context)
@@ -50,12 +46,7 @@ class customeredit(View):
     def post(self, request, *args, **kwargs):
         print(request.POST)
         print(request.POST.get('EMAIL', ''))
-        print(request.META.get('HTTP_REFERER', '/'))
-        print(request.path_info)
-        print(request.build_absolute_uri())
-        print(request.get_full_path())
-
-        _url_index = request.POST.get('URL_INDEX', '/customer/index')
+        _url_index = urlhelper.get_url_refer(request, '/customer/index') #request.session['_url_index']  #
         print(_url_index)
         # return redirect(to=_url_index)
         return HttpResponseRedirect(redirect_to=_url_index)
