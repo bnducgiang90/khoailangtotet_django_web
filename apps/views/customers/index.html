@@ -61,17 +61,17 @@
                     {% for item in items %}
                         <tr>
                             <td><input type="checkbox" class="checkthis"/></td>
-                            <td>{{ item.USERNAME }}</td>
-                            <td>{{ item.FULLNAME }}</td>
-                            <td>{{ item.EMAIL }}</td>
-                            <td>{{ item.BIRTHDAY |date:'d/m/Y' }}</td>
+                            <td>{{ item.first_name }}</td>
+                            <td>{{ item.last_name }}</td>
+                            <td>{{ item.email }}</td>
+                            <td>{{ item.last_update |date:'d/m/Y H:i:s' }}</td>
                             <td>
                                 <p data-placement="top" data-toggle="tooltip" title="Edit">
-                                    <a href="{% url 'apps1:customer_edit' slug=item.USERNAME %}" class="btn btn-info btn-sm" role="button">
+                                    <a href="{% url 'apps1:customer_edit' slug=item.customer_id %}" class="btn btn-info btn-sm" role="button">
                                         <!--<span class="glyphicon glyphicon-pencil"></span>-->
                                         <i class="fa fa-pencil fa-fw"></i>Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="{% url 'apps1:customer_delete' item.USERNAME %}">
+                                    <a class="btn btn-danger btn-sm" href="{% url 'apps1:customer_delete' item.customer_id %}">
                                         <i class="fa fa-trash-o fa-lg"></i> Delete
                                     </a>
                                 </p>

@@ -1,2 +1,2 @@
 class const_common:
-    PAGE_SIZE = 1
+    PAGE_SIZE = 25

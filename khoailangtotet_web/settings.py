@@ -85,6 +85,14 @@ DATABASES = {
             'HOST': 'localhost',
             'PORT': '5432',
         },
+    'postgresql_dvdrental': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'dvdrental',
+            'USER': 'postgres',
+            'PASSWORD': 'Postgres123',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        },
     'OPTIONS': {
             'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
         },

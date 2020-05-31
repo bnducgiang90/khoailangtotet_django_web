@@ -14,7 +14,7 @@ class customerindex(View):
 
     def get(self, request):
         _db = postgresqldb()
-        _datas = _db.getdatas()
+        _datas = _db.getcustomerdatas()
         _paginator = Paginator(_datas, const_common.PAGE_SIZE)
         _page = request.GET.get('page')
         _items = _paginator.get_page(_page)

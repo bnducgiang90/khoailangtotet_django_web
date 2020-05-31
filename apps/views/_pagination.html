@@ -1,38 +1,67 @@
 {% load urlparams %}
 <!--<nav aria-label="..."> -->
-      {% if items.has_other_pages %}
-  <ul class="pagination pagination-large">
-    {% if items.has_previous %}
-      <li class="page-item">
-          <a class="page-link" href="{% relative_url items.previous_page_number 'page' request.GET.urlencode %}">Previous&laquo;</a>
-{#          <a class="page-link" href="?page={{ items.previous_page_number }}">Previous&laquo;</a>#}
-      </li>
-    {% else %}
-      <li class="page-item disabled">
-          <span class="page-link">Previous&laquo;</span>
-      </li>
-    {% endif %}
-    {% for i in items.paginator.page_range %}
-      {% if items.number == i %}
-        <li class="page-item active">
-            <span class="page-link">{{ i }} <span class="sr-only">(current)</span></span>
-        </li>
-      {% else %}
-        <li page-item>
-            <a class="page-link" href="{% relative_url i 'page' request.GET.urlencode %}">{{ i }}</a>
-{#            <a class="page-link" href="?page={{ i }}">{{ i }}</a>#}
-        </li>
-      {% endif %}
-    {% endfor %}
-    {% if items.has_next %}
-      <li class="page-item">
-          <a class="page-link" href="{% relative_url items.next_page_number 'page' request.GET.urlencode %}">&raquo;Next</a>
-{#          <a class="page-link" href="?page={{ items.next_page_number }}">&raquo;Next</a>#}
-      </li>
-    {% else %}
-      <li class="page-item disabled">
-          <span class="page-link">&raquo;Next</span></li>
-    {% endif %}
-  </ul>
+{% if items.has_other_pages %}
+    <ul class="pagination pagination-large">
+        {% if items.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="{% relative_url 1 'page' request.GET.urlencode %}">First</a>
+
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="{% relative_url items.previous_page_number 'page' request.GET.urlencode %}">Previous&laquo;</a>
+                {#          <a class="page-link" href="?page={{ items.previous_page_number }}">Previous&laquo;</a>#}
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                <span class="page-link">Previous&laquo;</span>
+            </li>
+        {% endif %}
+
+        {% if items.number|add:'-4' > 1 %}
+            <li>
+                <a class="page-link" href="{% relative_url items.number|add:'-5' 'page' request.GET.urlencode %}">&hellip;</a>
+            </li>
+        {% endif %}
+
+        {% for i in items.paginator.page_range %}
+            {% if items.number == i %}
+                <li class="page-item active">
+                    <span class="page-link">{{ i }} <span class="sr-only">(current)</span></span>
+                </li>
+            {% elif i > items.number|add:'-5' and i < items.number|add:'5' %}
+                <li>
+                    {#            <a class="page-link" href="?page={{ i }}">{{ i }}</a>#}
+                    <a class="page-link" href="{% relative_url i 'page' request.GET.urlencode %}">{{ i }}</a>
+                </li>
+                {#      #}
+                {#      {% else %}#}
+                {#        <li page-item>#}
+                {#            <a class="page-link" href="{% relative_url i 'page' request.GET.urlencode %}">{{ i }}</a>#}
+                {#            <a class="page-link" href="?page={{ i }}">{{ i }}</a>#}
+                {#        </li>#}
+            {% endif %}
+        {% endfor %}
+
+        {% if items.paginator.num_pages > items.number|add:'4' %}
+            <li>
+                <a class="page-link" href="{% relative_url items.number|add:'5' 'page' request.GET.urlencode %}">&hellip;</a>
+            </li>
+        {% endif %}
+
+        {% if items.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{% relative_url items.next_page_number 'page' request.GET.urlencode %}">&raquo;Next</a>
+                {#          <a class="page-link" href="?page={{ items.next_page_number }}">&raquo;Next</a>#}
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="{% relative_url items.paginator.num_pages 'page' request.GET.urlencode %}">Last</a>
+
+            </li>
+        {% else %}
+            <li class="page-item disabled">
+                <span class="page-link">&raquo;Next</span>
+            </li>
+        {% endif %}
+    </ul>
 {% endif %}
 <!--</nav> -->

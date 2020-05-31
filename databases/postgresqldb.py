@@ -27,6 +27,16 @@ class postgresqldb:
                 for row in _cursor.fetchall()
             ]
 
+    def getcustomerdatas(self):
+        with connections['postgresql_dvdrental'].cursor() as _cursor:
+            _cursor.execute('SELECT * FROM public.customer')
+            # "Return all rows from a cursor as a dict"
+            _columns = [col[0] for col in _cursor.description]
+            return [
+                dict(zip(_columns, row))
+                for row in _cursor.fetchall()
+            ]
+
     def getallusers(self):
         with connections['postgresql_khoailangdb'].cursor() as _cursor:
             _cursor.execute('SELECT "USERNAME", "PASSWORD", "FULLNAME", "EMAIL", "BIRTHDAY" FROM "KL_USERS"')
